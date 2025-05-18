@@ -1,0 +1,111 @@
+{
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "Les Portes d'Accessibilia",
+      "description": "Bienvenue, aventurier. Le royaume numérique est plongé dans le chaos. Une ancienne interface a été corrompue. Ta quête : restaurer l'accessibilité sacrée.",
+      "image": "intro-castle.jpg",
+      "choices": [
+        {
+          "text": "Entrer dans le Donjon du Contraste",
+          "image": "enter-dungeon.png",
+          "consequences": {
+            "narration": "Tu pénètres dans l'obscurité. Tes yeux peinent à distinguer les éléments..."
+          },
+          "nextScene": "contrast-dungeon"
+        }
+      ]
+    },
+    {
+      "id": "contrast-dungeon",
+      "title": "Le Donjon du Contraste",
+      "description": "Les boutons sont sombres sur fond noir. Les utilisateurs ne voient rien. Que fais-tu ?",
+      "image": "dark-buttons.jpg",
+      "choices": [
+        {
+          "text": "Ignorer le contraste, priorité au style.",
+          "image": "bad-contrast-choice.jpg",
+          "consequences": {
+            "accessibilityScore": -2,
+            "gold": 0,
+            "narration": "Un murmure désapprobateur monte des ombres…"
+          },
+          "nextScene": "form-cave"
+        },
+        {
+          "text": "Proposer un contraste respectant WCAG AA.",
+          "image": "contrast-solution.jpg",
+          "consequences": {
+            "accessibilityScore": 2,
+            "gold": -1,
+            "narration": "La lumière perce les ténèbres. Le passage s’ouvre devant toi."
+          },
+          "nextScene": "form-cave"
+        }
+      ]
+    },
+    {
+      "id": "form-cave",
+      "title": "La Grotte des Formulaires",
+      "description": "Un champ obligatoire sans label te bloque la route. Le formulaire refuse de se soumettre.",
+      "image": "form-cave.jpg",
+      "choices": [
+        {
+          "text": "Ajouter un label explicite lié au champ.",
+          "image": "form-label.jpg",
+          "consequences": {
+            "accessibilityScore": 2,
+            "gold": -1,
+            "narration": "Les glyphes prennent sens. Le champ s’illumine et se valide."
+          },
+          "nextScene": "keyboard-labyrinth"
+        },
+        {
+          "text": "Ajouter une placeholder comme aide visuelle.",
+          "image": "placeholder-choice.jpg",
+          "consequences": {
+            "accessibilityScore": -1,
+            "gold": 0,
+            "narration": "Une illusion trompe les voyageurs daltoniens..."
+          },
+          "nextScene": "keyboard-labyrinth"
+        }
+      ]
+    },
+    {
+      "id": "keyboard-labyrinth",
+      "title": "Le Labyrinthe de la Navigation Clavier",
+      "description": "Les utilisateurs sans souris sont perdus. Les pièges sont nombreux. Comment guides-tu leur route ?",
+      "image": "keyboard-lab.jpg",
+      "choices": [
+        {
+          "text": "Implémenter un focus clair et une navigation séquentielle.",
+          "image": "keyboard-focus.jpg",
+          "consequences": {
+            "accessibilityScore": 3,
+            "gold": -2,
+            "narration": "Un chemin clair se dessine, guidé par le halo de ton focus."
+          },
+          "nextScene": "victory-hall"
+        },
+        {
+          "text": "Laisser la navigation au bon vouloir du framework.",
+          "image": "keyboard-chaos.jpg",
+          "consequences": {
+            "accessibilityScore": -2,
+            "gold": 0,
+            "narration": "Les utilisateurs tournent en rond, piégés dans l’obscurité."
+          },
+          "nextScene": "victory-hall"
+        }
+      ]
+    },
+    {
+      "id": "victory-hall",
+      "title": "La Salle de l'Équilibre Rétabli",
+      "description": "Tu arrives au cœur du royaume. Le Conseil d’Accessibilia t’évalue.",
+      "image": "victory-hall.jpg",
+      "choices": []
+    }
+  ]
+}
