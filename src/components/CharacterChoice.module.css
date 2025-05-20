@@ -1,0 +1,7 @@
+/* CharacterChoice.module.css */
+ul {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2em;
+  list-style-type: none;
+}
