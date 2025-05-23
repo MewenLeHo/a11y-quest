@@ -2,6 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## 🛡️ Licences
+
+- **Code source** : [GNU GPL v3](LICENSE)
+- **Narration, images et contenu créatif** : [CC BY-NC-SA 4.0](CONTENT-LICENSE.txt)
+
 ## Available Scripts
 
 In the project directory, you can run:
