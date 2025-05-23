@@ -1,0 +1,11 @@
+/* QuestionPage.module.css */
+.choices {
+  display: flex;
+  gap: 3em;
+}
+
+.goldInfo {
+  display: block;
+  font-size: 0.85em;
+  font-weight: 700;
+}

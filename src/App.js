@@ -74,7 +74,7 @@ function App() {
       {character && (
         <div className="hud">
           <p>
-            🎖 Score A11y : {accessibilityScore} | 💰 Or : {gold}
+            <span aria-hidden="true">🎖</span> Score A11y : {accessibilityScore} | <span aria-hidden="true">💰</span> Or : {gold}
           </p>
         </div>
       )}

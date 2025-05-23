@@ -53,7 +53,7 @@ function CharacterChoice({ onStart }) {
               Score d'accessibilité initial :{" "}
               {character.startingAccessibilityScore}
             </p>
-            <button onClick={() => onStart(character)}>Choisir</button>
+            <button onClick={() => onStart(character)}>Choisir<span className="visually-hidden"> la classe {character.name}</span></button>
           </li>
         ))}
       </ul>

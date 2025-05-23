@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "./QuestionPage.module.css";
 
 function QuestionPage({ scene, onChoice, accessibilityScore, gold }) {
   const [narration, setNarration] = useState("");
@@ -20,12 +21,13 @@ function QuestionPage({ scene, onChoice, accessibilityScore, gold }) {
         <img src={`/images/${scene.image}`} alt="" className="scene-image" />
       )}
 
-      <div className="choices">
+      <div className={styles.choices}>
         {scene.choices.map((choice, index) => (
           <button
             key={index}
             onClick={() => handleChoiceClick(choice)}
             className="choice-button"
+            disabled={gold + (choice.consequences.gold ?? 0) < 0} // désactive si pas assez d'or
           >
             {choice.image && (
               <img
@@ -35,12 +37,19 @@ function QuestionPage({ scene, onChoice, accessibilityScore, gold }) {
               />
             )}
             <span>{choice.text}</span>
+            <span className={styles.goldInfo}>
+            {choice.consequences.gold < 0
+              ? <><span aria-hidden="true">💰</span> -{Math.abs(choice.consequences.gold)} or</>
+              : choice.consequences.gold > 0
+              ? <><span aria-hidden="true">💰</span> +{choice.consequences.gold} or</>
+              : ""}
+          </span>
           </button>
         ))}
       </div>
 
       {narration && (
-        <div className="narration">
+        <div className="narration" aria-live="polite">
           <p>
             <em>{narration}</em>
           </p>
