@@ -30,7 +30,7 @@
             "gold": 0,
             "narration": "Un murmure désapprobateur monte des ombres…"
           },
-          "nextScene": "form-cave"
+          "nextScene": "treasure-justifications"
         },
         {
           "text": "Proposer un contraste respectant WCAG AA.",
@@ -38,7 +38,35 @@
           "consequences": {
             "accessibilityScore": 2,
             "gold": -1,
-            "narration": "La lumière perce les ténèbres. Le passage s’ouvre devant toi."
+            "narration": "Tu investis dans une refonte des couleurs. C'est un coût... mais la lisibilité renaît."
+          },
+          "nextScene": "treasure-justifications"
+        }
+      ]
+    },
+    {
+      "id": "treasure-justifications",
+      "title": "Le Trésor des Justifications",
+      "description": "Tu te présentes devant le Haut Conseil. Il te faut convaincre que l'accessibilité est un investissement rentable.",
+      "image": "council-treasure.jpg",
+      "choices": [
+        {
+          "text": "Présenter un retour sur investissement des pratiques en accessibilité",
+          "image": "roi-pitch.jpg",
+          "consequences": {
+            "accessibilityScore": 1,
+            "gold": 3,
+            "narration": "Impressionné, le Conseil débloque une bourse dédiée à ton projet."
+          },
+          "nextScene": "form-cave"
+        },
+        {
+          "text": "Parler avec passion mais sans preuve",
+          "image": "vague-pitch.jpg",
+          "consequences": {
+            "accessibilityScore": 0,
+            "gold": 0,
+            "narration": "Le Conseil t'écoute mais reste frileux. Aucun budget supplémentaire n'est accordé."
           },
           "nextScene": "form-cave"
         }
@@ -56,17 +84,45 @@
           "consequences": {
             "accessibilityScore": 2,
             "gold": -1,
-            "narration": "Les glyphes prennent sens. Le champ s’illumine et se valide."
+            "narration": "Les glyphes prennent sens. Le champ s'illumine et se valide."
           },
-          "nextScene": "keyboard-labyrinth"
+          "nextScene": "mentor-training"
         },
         {
-          "text": "Ajouter une placeholder comme aide visuelle.",
+          "text": "Ajouter un placeholder comme aide visuelle.",
           "image": "placeholder-choice.jpg",
           "consequences": {
             "accessibilityScore": -1,
             "gold": 0,
             "narration": "Une illusion trompe les voyageurs daltoniens..."
+          },
+          "nextScene": "mentor-training"
+        }
+      ]
+    },
+    {
+      "id": "mentor-training",
+      "title": "Le Mentor des Normes",
+      "description": "Un vieux sage t’invite à une session de formation sur les standards WCAG.",
+      "image": "mentor.jpg",
+      "choices": [
+        {
+          "text": "Suivre la formation avec ton équipe",
+          "image": "training-team.jpg",
+          "consequences": {
+            "accessibilityScore": 2,
+            "gold": -1,
+            "narration": "Ta compréhension des normes s’affine. L'investissement portera ses fruits."
+          },
+          "nextScene": "keyboard-labyrinth"
+        },
+        {
+          "text": "Reporter, faute de budget",
+          "image": "decline-training.jpg",
+          "consequences": {
+            "accessibilityScore": -1,
+            "gold": 0,
+            "narration": "Le sage s’éloigne tristement. Une opportunité a été manquée."
           },
           "nextScene": "keyboard-labyrinth"
         }
@@ -94,7 +150,7 @@
           "consequences": {
             "accessibilityScore": -2,
             "gold": 0,
-            "narration": "Les utilisateurs tournent en rond, piégés dans l’obscurité."
+            "narration": "Les utilisateurs tournent en rond, piégés dans l'obscurité."
           },
           "nextScene": "victory-hall"
         }
@@ -103,7 +159,7 @@
     {
       "id": "victory-hall",
       "title": "La Salle de l'Équilibre Rétabli",
-      "description": "Tu arrives au cœur du royaume. Le Conseil d’Accessibilia t’évalue.",
+      "description": "Tu arrives au cœur du royaume. Le Conseil d'Accessibilia t'évalue.",
       "image": "victory-hall.jpg",
       "choices": []
     }

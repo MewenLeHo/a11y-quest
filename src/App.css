@@ -1,4 +1,15 @@
 /* App.css */
+:root {
+  --parchment-brown: #D9CBB0;
+  --moss-green: #556B2F;
+  --deep-burgundy: #4B1E2E;
+  --stone-gray: #888888;
+  --midnight-blue: #2A3B4C;
+
+  --aged-gold: #C2B280;
+  --blood-red: #7B2D26;
+  --sapphire-blue: #3B5B92;
+}
 
 /* Centrer le contenu de la page */
 .App {
@@ -7,14 +18,20 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #f4f4f9;
-  font-family: Arial, sans-serif;
-  padding: 20px;
+  background: var(--parchment-brown);
+  color: var(--deep-burgundy);
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  font-size: 1rem;
 }
 
 h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
+  font-family: 'IM Fell English', serif;
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 2px rgba(75, 30, 46, 0.3);
+  line-height: 1.1;
 }
 
 .game-intro {
@@ -34,14 +51,39 @@ input[type="text"] {
   font-size: 1em;
 }
 
+input[type="text"]:focus {
+  outline: 3px solid var(--sapphire-blue);
+  outline-offset: 2px;
+  background-color: #fffef0;
+}
+
 button {
   padding: 10px 20px;
   font-size: 1em;
   cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--aged-gold);
+  color: var(--deep-burgundy);
+  border: 2px solid var(--deep-burgundy);
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: none;
+}
+
+button:hover:not(:disabled),
+button:focus:not(:disabled) {
+  background-color: var(--deep-burgundy);
+  color: var(--aged-gold);
+  outline: none;
+  box-shadow: 0 0 5px var(--aged-gold);
 }
 
 button:disabled {
   background-color: #ccc;
+  color: #666;
+  border-color: #999;
+  cursor: not-allowed;
+  box-shadow: none;
 }
 
 .score {
@@ -51,6 +93,23 @@ button:disabled {
 
 label {
   font-size: 1.2em;
+  font-weight: bold;
+  color: var(--deep-burgundy);
+  margin-bottom: 0.25em;
+  display: block;
 }
 
+.visually-hidden:not(caption) {
+  position: absolute !important;
+}
 
+.visually-hidden, .visually-hidden-focusable:not(:focus):not(:focus-within) {
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
