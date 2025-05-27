@@ -1,0 +1,32 @@
+/* ScenarioSelector.module.css */
+.scenarioSelector {
+  padding: 2rem;
+  text-align: center;
+}
+
+.scenarioList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+.scenarioCard {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.scenarioCard button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #0053a4;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}

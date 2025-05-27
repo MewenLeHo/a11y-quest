@@ -1,0 +1,68 @@
+{
+  "scenes": [
+    {
+      "id": "intro-forgeron",
+      "title": "Les Portes d'Accessibilia - Le Forgeron",
+      "description": "Le royaume numérique gémit sous le poids d'interfaces brisées. En tant que forgeron du code, tu entres dans l'arène armé de ton IDE et de ta maîtrise du DOM. Les balises sont tes enclumes, les standards ton feu sacré.",
+      "image": "intro-forgeron.jpg",
+      "choices": [
+        {
+          "text": "Analyser le markup du Donjon du Contraste",
+          "image": "enter-dungeon.png",
+          "consequences": {
+            "narration": "Tu dégaines ta loupe de débogage. Les contrastes te résistent à peine…"
+          },
+          "nextScene": "contrast-dungeon"
+        }
+      ]
+    },
+    {
+      "id": "intro-alchimiste",
+      "title": "Les Portes d'Accessibilia - L’Alchimiste",
+      "description": "Une brume esthétique recouvre Accessibilia. En tant qu’alchimiste des pixels, tu sens les dissonances visuelles et les incohérences UX. À toi de restaurer l’équilibre entre beauté et accessibilité.",
+      "image": "intro-alchimiste.jpg",
+      "choices": [
+        {
+          "text": "Explorer les couleurs du Donjon du Contraste",
+          "image": "enter-dungeon.png",
+          "consequences": {
+            "narration": "Ta palette est prête. Chaque couleur sera pesée… chaque contraste mesuré."
+          },
+          "nextScene": "contrast-dungeon"
+        }
+      ]
+    },
+    {
+      "id": "intro-stratege",
+      "title": "Les Portes d'Accessibilia - Le Stratège",
+      "description": "Le chaos numérique compromet les délais et les budgets. En tant que stratège du royaume, tu jongles avec les contraintes. L’accessibilité n’est pas un coût, mais une stratégie. À toi de le prouver.",
+      "image": "intro-stratege.jpg",
+      "choices": [
+        {
+          "text": "Prioriser les chantiers du Donjon du Contraste",
+          "image": "enter-dungeon.png",
+          "consequences": {
+            "narration": "Tu examines les retours utilisateurs et traces une roadmap vers la clarté."
+          },
+          "nextScene": "contrast-dungeon"
+        }
+      ]
+    },
+    {
+      "id": "intro-mage",
+      "title": "Les Portes d'Accessibilia - Le Mage",
+      "description": "Les anciennes normes RGAA ont été oubliées, et les erreurs se répandent. En tant que mage des standards, tu récites les critères comme des incantations. Ton grimoire est à jour, ton esprit affûté.",
+      "image": "intro-mage.jpg",
+      "choices": [
+        {
+          "text": "Lire les glyphes du Donjon du Contraste",
+          "image": "enter-dungeon.png",
+          "consequences": {
+            "narration": "Tu décryptes le code et entends les plaintes des lecteurs d’écran..."
+          },
+          "nextScene": "contrast-dungeon"
+        }
+      ]
+    }
+  ]
+}

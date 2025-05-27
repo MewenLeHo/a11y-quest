@@ -1,32 +1,14 @@
 /* Results.module.css */
-.endingImage  {
-  max-height: 500px;
-}
-
 .resultsPage {
   padding: 2rem;
   border-radius: 1rem;
   text-align: center;
+  background: rgba(255, 255, 255, 0.05); /* Légèrement translucide, ou remplace si besoin */
+  backdrop-filter: blur(4px); /* Verre dépoli */
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
   transition: background 0.5s ease, color 0.5s ease;
 }
 
-/* Victoire : lumière et noblesse */
-.victory {
-  background: linear-gradient(to bottom right, var(--aged-gold), #f8f5e5);
-  color: var(--moss-green);
-  box-shadow: 0 0 20px var(--aged-gold);
-}
-
-/* Défaite : désespoir et ténèbres */
-.failure {
-  background: linear-gradient(to bottom, var(--deep-burgundy), var(--midnight-blue));
-  color: var(--parchment-brown);
-  box-shadow: inset 0 0 10px var(--blood-red);
-}
-
-/* Fin neutre : équilibre incertain */
-.neutral {
-  background: linear-gradient(to bottom, var(--stone-gray), #e4dec7);
-  color: var(--sapphire-blue);
-  box-shadow: 0 0 10px rgba(136, 136, 136, 0.3);
+.endingImage {
+  max-height: 500px;
 }

@@ -2,7 +2,7 @@ import React from "react";
 import styles from './CharacterChoice.module.css';
 
 // Liste des personnages avec leurs stats de départ
-const CHARACTERS = {
+export const CHARACTERS = {
   forgeron: {
     name: "Forgeron du code",
     description: "Développeur, maître des outils et du DOM",
