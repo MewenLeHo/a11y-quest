@@ -1,4 +1,3 @@
-/* App.css */
 :root {
   --parchment-brown: #D9CBB0;
   --moss-green: #556B2F;
@@ -11,19 +10,42 @@
   --sapphire-blue: #3B5B92;
 }
 
-/* Centrer le contenu de la page */
+/* Fond dynamique selon le score final */
+body.score-victory {
+  background: linear-gradient(to bottom right, var(--aged-gold), #f8f5e5);
+  color: var(--moss-green);
+}
+
+body.score-failure {
+  background: linear-gradient(to bottom, var(--deep-burgundy), var(--midnight-blue));
+  color: var(--parchment-brown);
+}
+
+body.score-neutral {
+  background: linear-gradient(to bottom, var(--stone-gray), #e4dec7);
+  color: var(--sapphire-blue);
+}
+
+/* Transition fluide */
+body {
+  background: var(--parchment-brown); /* fond par défaut */
+  color: var(--deep-burgundy);
+  transition: background 0.6s ease, color 0.6s ease;
+}
+
+/* Conteneur global */
 .App {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: var(--parchment-brown);
-  color: var(--deep-burgundy);
   font-family: Arial, Helvetica, sans-serif;
+  color: inherit;
   letter-spacing: 0.02em;
   line-height: 1.5;
   font-size: 1rem;
+  background: transparent; /* Ne pas forcer un fond opaque ici */
 }
 
 h1 {
@@ -99,11 +121,13 @@ label {
   display: block;
 }
 
+/* Accessibilité */
 .visually-hidden:not(caption) {
   position: absolute !important;
 }
 
-.visually-hidden, .visually-hidden-focusable:not(:focus):not(:focus-within) {
+.visually-hidden,
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
   width: 1px !important;
   height: 1px !important;
   padding: 0 !important;
@@ -112,4 +136,20 @@ label {
   clip: rect(0, 0, 0, 0) !important;
   white-space: nowrap !important;
   border: 0 !important;
+}
+
+
+body.score-victory {
+  background: linear-gradient(to bottom right, var(--aged-gold), #f8f5e5);
+  color: var(--moss-green);
+}
+
+body.score-failure {
+  background: linear-gradient(to bottom, var(--deep-burgundy), var(--midnight-blue));
+  color: var(--parchment-brown);
+}
+
+body.score-neutral {
+  background: linear-gradient(to bottom, var(--stone-gray), #e4dec7);
+  color: var(--sapphire-blue);
 }

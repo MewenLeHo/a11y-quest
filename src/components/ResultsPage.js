@@ -1,5 +1,5 @@
-import React from "react";
-import styles from './ResultsPage.module.css';
+import React, { useEffect } from "react";
+import styles from "./ResultsPage.module.css";
 
 function generateEnding(score) {
   if (score >= 6) {
@@ -35,8 +35,16 @@ function endingClass(score) {
 function ResultsPage({ score, gold, name, character }) {
   const ending = generateEnding(score);
 
+  useEffect(() => {
+    const className = `score-${endingClass(score)}`;
+    document.body.classList.add(className);
+    return () => {
+      document.body.classList.remove(className);
+    };
+  }, [score]);
+
   return (
-    <div className={`${styles.resultsPage} ${styles[endingClass(score)]}`}>
+    <div className={styles.resultsPage}>
       <h2>
         <span aria-hidden="true">🏰</span> Fin de la Quête
       </h2>
@@ -44,7 +52,7 @@ function ResultsPage({ score, gold, name, character }) {
       <img
         src={`${process.env.PUBLIC_URL}/images/scores/${ending.image}`}
         alt=""
-        className={styles.endingImage }
+        className={styles.endingImage}
       />
 
       <p>Nom : {name}</p>
