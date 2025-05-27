@@ -1,0 +1,167 @@
+{
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "Les Portes d'Accessibilia",
+      "description": "Bienvenue, aventurier. Le royaume numérique est plongé dans le chaos. Une ancienne interface a été corrompue. Ta quête : restaurer l'accessibilité sacrée.",
+      "image": "intro-castle.jpg",
+      "choices": [
+        {
+          "text": "Entrer dans le Donjon du Contraste",
+          "image": "enter-dungeon.png",
+          "consequences": {
+            "narration": "Tu pénètres dans l'obscurité. Tes yeux peinent à distinguer les éléments..."
+          },
+          "nextScene": "contrast-dungeon"
+        }
+      ]
+    },
+    {
+      "id": "contrast-dungeon",
+      "title": "Le Donjon du Contraste",
+      "description": "Les boutons sont sombres sur fond noir. Les utilisateurs ne voient rien. Que fais-tu ?",
+      "image": "dark-buttons.jpg",
+      "choices": [
+        {
+          "text": "Ignorer le contraste, priorité au style.",
+          "image": "bad-contrast-choice.jpg",
+          "consequences": {
+            "accessibilityScore": -2,
+            "gold": 0,
+            "narration": "Un murmure désapprobateur monte des ombres…"
+          },
+          "nextScene": "treasure-justifications"
+        },
+        {
+          "text": "Proposer un contraste respectant WCAG AA.",
+          "image": "contrast-solution.jpg",
+          "consequences": {
+            "accessibilityScore": 2,
+            "gold": -1,
+            "narration": "Tu investis dans une refonte des couleurs. C'est un coût... mais la lisibilité renaît."
+          },
+          "nextScene": "treasure-justifications"
+        }
+      ]
+    },
+    {
+      "id": "treasure-justifications",
+      "title": "Le Trésor des Justifications",
+      "description": "Tu te présentes devant le Haut Conseil. Il te faut convaincre que l'accessibilité est un investissement rentable.",
+      "image": "council-treasure.jpg",
+      "choices": [
+        {
+          "text": "Présenter un retour sur investissement des pratiques en accessibilité",
+          "image": "roi-pitch.jpg",
+          "consequences": {
+            "accessibilityScore": 1,
+            "gold": 3,
+            "narration": "Impressionné, le Conseil débloque une bourse dédiée à ton projet."
+          },
+          "nextScene": "form-cave"
+        },
+        {
+          "text": "Parler avec passion mais sans preuve",
+          "image": "vague-pitch.jpg",
+          "consequences": {
+            "accessibilityScore": 0,
+            "gold": 0,
+            "narration": "Le Conseil t'écoute mais reste frileux. Aucun budget supplémentaire n'est accordé."
+          },
+          "nextScene": "form-cave"
+        }
+      ]
+    },
+    {
+      "id": "form-cave",
+      "title": "La Grotte des Formulaires",
+      "description": "Un champ obligatoire sans label te bloque la route. Le formulaire refuse de se soumettre.",
+      "image": "form-cave.jpg",
+      "choices": [
+        {
+          "text": "Ajouter un label explicite lié au champ.",
+          "image": "form-label.jpg",
+          "consequences": {
+            "accessibilityScore": 2,
+            "gold": -1,
+            "narration": "Les glyphes prennent sens. Le champ s'illumine et se valide."
+          },
+          "nextScene": "mentor-training"
+        },
+        {
+          "text": "Ajouter un placeholder comme aide visuelle.",
+          "image": "placeholder-choice.jpg",
+          "consequences": {
+            "accessibilityScore": -1,
+            "gold": 0,
+            "narration": "Une illusion trompe les voyageurs daltoniens..."
+          },
+          "nextScene": "mentor-training"
+        }
+      ]
+    },
+    {
+      "id": "mentor-training",
+      "title": "Le Mentor des Normes",
+      "description": "Un vieux sage t’invite à une session de formation sur les standards WCAG.",
+      "image": "mentor.jpg",
+      "choices": [
+        {
+          "text": "Suivre la formation avec ton équipe",
+          "image": "training-team.jpg",
+          "consequences": {
+            "accessibilityScore": 2,
+            "gold": -1,
+            "narration": "Ta compréhension des normes s’affine. L'investissement portera ses fruits."
+          },
+          "nextScene": "keyboard-labyrinth"
+        },
+        {
+          "text": "Reporter, faute de budget",
+          "image": "decline-training.jpg",
+          "consequences": {
+            "accessibilityScore": -1,
+            "gold": 0,
+            "narration": "Le sage s’éloigne tristement. Une opportunité a été manquée."
+          },
+          "nextScene": "keyboard-labyrinth"
+        }
+      ]
+    },
+    {
+      "id": "keyboard-labyrinth",
+      "title": "Le Labyrinthe de la Navigation Clavier",
+      "description": "Les utilisateurs sans souris sont perdus. Les pièges sont nombreux. Comment guides-tu leur route ?",
+      "image": "keyboard-lab.jpg",
+      "choices": [
+        {
+          "text": "Implémenter un focus clair et une navigation séquentielle.",
+          "image": "keyboard-focus.jpg",
+          "consequences": {
+            "accessibilityScore": 3,
+            "gold": -2,
+            "narration": "Un chemin clair se dessine, guidé par le halo de ton focus."
+          },
+          "nextScene": "victory-hall"
+        },
+        {
+          "text": "Laisser la navigation au bon vouloir du framework.",
+          "image": "keyboard-chaos.jpg",
+          "consequences": {
+            "accessibilityScore": -2,
+            "gold": 0,
+            "narration": "Les utilisateurs tournent en rond, piégés dans l'obscurité."
+          },
+          "nextScene": "victory-hall"
+        }
+      ]
+    },
+    {
+      "id": "victory-hall",
+      "title": "La Salle de l'Équilibre Rétabli",
+      "description": "Tu arrives au cœur du royaume. Le Conseil d'Accessibilia t'évalue.",
+      "image": "victory-hall.jpg",
+      "choices": []
+    }
+  ]
+}
