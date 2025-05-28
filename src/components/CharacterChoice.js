@@ -17,7 +17,7 @@ export const CHARACTERS = {
     startingAccessibilityScore: 2,
     image: "alchimiste.png",
   },
-  stratège: {
+  stratege: {
     name: "Stratège du royaume",
     description: "Chef de projet, gestionnaire de budget et de priorités",
     startingGold: 5,
