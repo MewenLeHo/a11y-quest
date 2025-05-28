@@ -18,8 +18,8 @@
     },
     {
       "id": "intro-alchimiste",
-      "title": "Les Portes d'Accessibilia - L’Alchimiste",
-      "description": "Une brume esthétique recouvre Accessibilia. En tant qu’alchimiste des pixels, tu sens les dissonances visuelles et les incohérences UX. À toi de restaurer l’équilibre entre beauté et accessibilité.",
+      "title": "Les Portes d'Accessibilia - L'Alchimiste",
+      "description": "Une brume esthétique recouvre Accessibilia. En tant qu'alchimiste des pixels, tu sens les dissonances visuelles et les incohérences UX. À toi de restaurer l'équilibre entre beauté et accessibilité.",
       "image": "intro-alchimiste.jpg",
       "choices": [
         {
@@ -35,7 +35,7 @@
     {
       "id": "intro-stratege",
       "title": "Les Portes d'Accessibilia - Le Stratège",
-      "description": "Le chaos numérique compromet les délais et les budgets. En tant que stratège du royaume, tu jongles avec les contraintes. L’accessibilité n’est pas un coût, mais une stratégie. À toi de le prouver.",
+      "description": "Le chaos numérique compromet les délais et les budgets. En tant que stratège du royaume, tu jongles avec les contraintes. L'accessibilité n'est pas un coût, mais une stratégie. À toi de le prouver.",
       "image": "intro-stratege.jpg",
       "choices": [
         {
