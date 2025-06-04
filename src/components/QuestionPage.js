@@ -61,13 +61,15 @@ function QuestionPage({ scene, onChoice, accessibilityScore, gold }) {
         ))}
       </div>
 
-      {narration && (
-        <div className="narration" aria-live="polite">
-          <p>
-            <em>{narration}</em>
-          </p>
-        </div>
-      )}
+      <div className={styles.narrationWrapper}>
+        {narration && (
+          <div className={styles.narration} aria-live="polite">
+            <p>
+              <em>{narration}</em>
+            </p>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
