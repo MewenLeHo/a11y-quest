@@ -24,9 +24,25 @@
 .scenarioCard button {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
-  background: #0053a4;
-  color: white;
+  background-color: var(--curse-blood);
+  color: var(--sunfire-aura);
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.scenarioCard button:hover {
+  background-color: var(--blood-red);
+  color: var(--sunfire-aura);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.scenarioCard button:focus {
+  background-color: var(--blood-red);
+  color: var(--sunfire-aura);
+  outline: 2px solid var(--blood-red);
+  outline-offset: 3px;
 }
