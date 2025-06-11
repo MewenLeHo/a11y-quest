@@ -106,6 +106,7 @@ function Game({
   }
 
   const scene = mergeVariant(rawScene, getCharacterKey(character));
+  const origin = getCharacterKey(character);
   const isGameOver = scene.choices.length === 0;
 
   return (
@@ -123,6 +124,7 @@ function Game({
           onChoice={handleChoice}
           gold={gold}
           accessibilityScore={accessibilityScore}
+          origin={origin}
         />
       )}
     </>

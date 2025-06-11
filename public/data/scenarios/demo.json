@@ -103,7 +103,7 @@
     {
       "id": "mentor-training",
       "title": "Le Mentor des Normes",
-      "description": "Un vieux sage t’invite à une session de formation sur les standards WCAG.",
+      "description": "Un vieux sage t'invite à une session de formation sur les standards WCAG.",
       "image": "mentor.jpg",
       "choices": [
         {
@@ -112,7 +112,7 @@
           "consequences": {
             "accessibilityScore": 2,
             "gold": -1,
-            "narration": "Ta compréhension des normes s’affine. L'investissement portera ses fruits."
+            "narration": "Ta compréhension des normes s'affine. L'investissement portera ses fruits."
           },
           "nextScene": "keyboard-labyrinth"
         },
@@ -122,7 +122,7 @@
           "consequences": {
             "accessibilityScore": -1,
             "gold": 0,
-            "narration": "Le sage s’éloigne tristement. Une opportunité a été manquée."
+            "narration": "Le sage s'éloigne tristement. Une opportunité a été manquée."
           },
           "nextScene": "keyboard-labyrinth"
         }
