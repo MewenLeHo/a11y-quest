@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./QuestionPage.module.css";
 
-function QuestionPage({ scene, onChoice, accessibilityScore, gold }) {
+function QuestionPage({ scene, onChoice, accessibilityScore, gold, origin }) {
   const [narration, setNarration] = useState("");
 
   if (!scene) {
@@ -10,7 +10,24 @@ function QuestionPage({ scene, onChoice, accessibilityScore, gold }) {
 
   const handleChoiceClick = (choice) => {
     const { consequences, nextScene } = choice;
-    setNarration(consequences?.narration || "");
+
+    let narrationText = "";
+
+    if (
+      consequences?.narrationByOrigin &&
+      typeof consequences.narrationByOrigin === "object" &&
+      origin
+    ) {
+      narrationText =
+        consequences.narrationByOrigin[origin] ||
+        consequences.narration ||
+        "Tu continues ta route...";
+    } else {
+      narrationText = consequences?.narration || "Tu continues ta route...";
+    }
+
+    setNarration(narrationText);
+
     setTimeout(() => {
       setNarration("");
       onChoice(consequences, nextScene);

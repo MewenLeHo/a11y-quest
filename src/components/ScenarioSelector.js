@@ -10,8 +10,8 @@ const SCENARIOS = [
   },
   {
     id: "test",
-    title: "WIP",
-    description: "WIP",
+    title: "Mode histoire",
+    description: "Scénario avec des choix différents selon les personnages.",
     image: "/images/scenarios/formation.png",
   },
 ];

@@ -11,7 +11,7 @@
 }
 
 .narrationWrapper {
-  min-height: 3rem; /* réserve l’espace même si la narration est absente */
+  min-height: 3rem; /* réserve l'espace même si la narration est absente */
 }
 
 .narration {
