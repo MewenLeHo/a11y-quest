@@ -12,6 +12,41 @@
           "consequences": {
             "narration": "Tu dégaines ta loupe de débogage. Les contrastes te résistent à peine…"
           },
+          "nextScene": "dev-task-1"
+        }
+      ]
+    },
+    {
+      "id": "dev-task-1",
+      "title": "L'Atelier du Code Contrasté",
+      "description": "Tu ouvres une section de code douteuse. Balises imbriquées étrangement, styles inline à foison. Un contraste étrange attire ton regard…",
+      "image": "code-lab.jpg",
+      "choices": [
+        {
+          "text": "Appliquer une couleur respectant les ratios WCAG",
+          "consequences": {
+            "accessibilityScore": 2,
+            "gold": -1,
+            "narration": "Tu sélectionnes une teinte conforme. Le code s'éclaire, les contrastes s'harmonisent."
+          },
+          "nextScene": "contrast-dungeon"
+        },
+        {
+          "text": "Utiliser mix-blend-mode",
+          "consequences": {
+            "accessibilityScore": 1,
+            "gold": -1,
+            "narration": "L'effet est stylé, mais les contrastes deviennent imprévisibles..."
+          },
+          "nextScene": "contrast-dungeon"
+        },
+        {
+          "text": "Ajouter un box-shadow coloré",
+          "consequences": {
+            "accessibilityScore": -1,
+            "gold": -1,
+            "narration": "Le résultat est visuellement agréable… mais l'accessibilité reste incertaine."
+          },
           "nextScene": "contrast-dungeon"
         }
       ]
@@ -26,7 +61,42 @@
           "text": "Explorer les couleurs du Donjon du Contraste",
           "image": "enter-dungeon.png",
           "consequences": {
-            "narration": "Ta palette est prête. Chaque couleur sera pesée… chaque contraste mesuré."
+            "narration": "Ta palette est prête. Chaque couleur sera pesée et chaque contraste mesuré."
+          },
+          "nextScene": "design-task-1"
+        }
+      ]
+    },
+    {
+      "id": "design-task-1",
+      "title": "L'Épreuve Chromatique",
+      "description": "Une palette douteuse te fait froncer les sourcils. Les couleurs semblent jolies… mais l'harmonie avec l'accessibilité est incertaine. Quel niveau de contraste veux-tu faire respecter ?",
+      "image": "color-test.jpg",
+      "choices": [
+        {
+          "text": "4.5:1",
+          "consequences": {
+            "accessibilityScore": 2,
+            "gold": -1,
+            "narration": "Exactement. Tu ajustes les couleurs et la lisibilité s'améliore instantanément."
+          },
+          "nextScene": "contrast-dungeon"
+        },
+        {
+          "text": "3:1",
+          "consequences": {
+            "accessibilityScore": 1,
+            "gold": -1,
+            "narration": "C'est insuffisant pour du texte normal… le doute persiste dans ta palette."
+          },
+          "nextScene": "contrast-dungeon"
+        },
+        {
+          "text": "2:1",
+          "consequences": {
+            "accessibilityScore": -1,
+            "gold": -1,
+            "narration": "C'est très insuffisant…"
           },
           "nextScene": "contrast-dungeon"
         }
@@ -44,6 +114,41 @@
           "consequences": {
             "narration": "Tu examines les retours utilisateurs et traces une roadmap vers la clarté."
           },
+          "nextScene": "strategy-task-1"
+        }
+      ]
+    },
+    {
+      "id": "strategy-task-1",
+      "title": "Le Conseil des Arbitrages",
+      "description": "Tu es face à plusieurs projets à prioriser. L'accessibilité est un critère, mais le temps presse…",
+      "image": "strategy-table.jpg",
+      "choices": [
+        {
+          "text": "L'intégrer dès la phase de conception",
+          "consequences": {
+            "accessibilityScore": 2,
+            "gold": -1,
+            "narration": "Tu gagnes du temps à long terme. Tes équipes saluent ta clairvoyance."
+          },
+          "nextScene": "contrast-dungeon"
+        },
+        {
+          "text": "La traiter après les tests",
+          "consequences": {
+            "accessibilityScore": 1,
+            "gold": -1,
+            "narration": "Les correctifs coûtent cher, et tu sens déjà des frictions internes…"
+          },
+          "nextScene": "contrast-dungeon"
+        },
+        {
+          "text": "La déléguer à un expert en fin de sprint",
+          "consequences": {
+            "accessibilityScore": -1,
+            "gold": -1,
+            "narration": "Un choix risqué. La dette technique rôde déjà dans l'ombre."
+          },
           "nextScene": "contrast-dungeon"
         }
       ]
@@ -58,11 +163,178 @@
           "text": "Lire les glyphes du Donjon du Contraste",
           "image": "enter-dungeon.png",
           "consequences": {
-            "narration": "Tu décryptes le code et entends les plaintes des lecteurs d’écran..."
+            "narration": "Tu décryptes le code et entends les plaintes des lecteurs d'écran..."
+          },
+          "nextScene": "audit-task-1"
+        }
+      ]
+    },
+    {
+      "id": "audit-task-1",
+      "title": "Le Grimoire des Critères",
+      "description": "Tu trouves un composant personnalisé. Un lecteur d'écran semble silencieux face à lui…",
+      "image": "spellbook.jpg",
+      "choices": [
+        {
+          "text": "Vérifier les rôles ARIA et les labels",
+          "consequences": {
+            "accessibilityScore": 2,
+            "gold": -1,
+            "narration": "Tu identifies le problème : le rôle manquait, le nom accessible était vide. Tu lances un correctif immédiat."
+          },
+          "nextScene": "contrast-dungeon"
+        },
+        {
+          "text": "Revoir l'ordre du CSS",
+          "consequences": {
+            "accessibilityScore": -1,
+            "gold": -1,
+            "narration": "Le style est secondaire ici… le problème reste entier."
+          },
+          "nextScene": "contrast-dungeon"
+        },
+        {
+          "text": "Examiner la structure DOM",
+          "consequences": {
+            "accessibilityScore": -1,
+            "gold": -1,
+            "narration": "Tu vois une hiérarchie étrange, mais rien qui empêche la vocalisation à ce niveau…"
           },
           "nextScene": "contrast-dungeon"
         }
       ]
+    },
+    {
+      "id": "contrast-dungeon",
+      "title": "Le Donjon du Contraste",
+      "description": "Tu pénètres dans une salle obscure où les textes se fondent dans le décor. Une voix t'interpelle : « Seuls ceux qui perçoivent les nuances pourront libérer la lisibilité ».",
+      "image": "contrast-dungeon.jpg",
+      "choices": [
+        {
+          "text": "Changer la couleur d'un bouton inaccessible",
+          "image": "button-fix.png",
+          "consequences": {
+            "accessibilityScore": 2,
+            "gold": -1,
+            "narrationByOrigin": {
+              "intro-forgeron": "Un simple changement de classe CSS suffit à révéler le bouton à tous.",
+              "intro-alchimiste": "Tu ajustes la teinte en préservant l'harmonie globale. L'interface te remercie.",
+              "intro-stratege": "Tu sais que ce bouton est un point de conversion clé. La visibilité est stratégique.",
+              "intro-mage": "Tu murmures « contraste minimum de 4.5:1 ». Le bouton brille d'une aura accessible."
+            }
+          },
+          "nextScene": "hidden-treasure"
+        },
+        {
+          "text": "Ignorer les alertes de contraste",
+          "image": "ignore-alerts.png",
+          "consequences": {
+            "accessibilityScore": -2,
+            "gold": -1,
+            "narration": "Un frisson traverse le donjon. Les plaintes d'utilisateurs invisibles se font entendre…"
+          },
+          "nextScene": "mentor-training"
+        }
+      ]
+    },
+    {
+      "id": "hidden-treasure",
+      "title": "Le Trésor Caché",
+      "description": "Tu découvres un coffre abandonné contenant des ressources précieuses.",
+      "image": "treasure-chest.jpg",
+      "choices": [
+        {
+          "text": "Ouvrir le coffre et récupérer 5 pièces d'or",
+          "image": "open-chest.jpg",
+          "consequences": {
+            "gold": 5,
+            "narration": "Tu récupères un butin utile pour financer tes futurs projets."
+          },
+          "nextScene": "mentor-training"
+        },
+        {
+          "text": "Ignorer le coffre, méfiant",
+          "image": "ignore-chest.jpg",
+          "consequences": {
+            "gold": 0,
+            "narration": "Tu passes ton chemin, préférant rester prudent."
+          },
+          "nextScene": "mentor-training"
+        }
+      ]
+    },
+    {
+      "id": "mentor-training",
+      "title": "Le Mentor des Normes",
+      "description": "Un vieux sage t'invite à une session de formation sur les standards WCAG.",
+      "image": "mentor.jpg",
+      "choices": [
+        {
+          "text": "Suivre la formation avec ton équipe",
+          "image": "training-team.jpg",
+          "consequences": {
+            "accessibilityScore": 2,
+            "gold": -1,
+            "narrationByOrigin": {
+              "intro-forgeron": "Un simple changement de classe CSS suffit à révéler le bouton à tous.",
+              "intro-alchimiste": "Tu ajustes la teinte en préservant l'harmonie globale. L'interface te remercie.",
+              "intro-stratege": "Tu sais que ce bouton est un point de conversion clé. La visibilité est stratégique.",
+              "intro-mage": "Tu murmures « contraste minimum de 4.5:1 ». Le bouton brille d'une aura accessible."
+            }
+          },
+          "nextScene": "keyboard-labyrinth"
+        },
+        {
+          "text": "Reporter, faute de budget",
+          "image": "decline-training.jpg",
+          "consequences": {
+            "accessibilityScore": -1,
+            "gold": 0,
+            "narration": "Le sage s'éloigne tristement. Une opportunité a été manquée."
+          },
+          "nextScene": "keyboard-labyrinth"
+        }
+      ]
+    },
+    {
+      "id": "keyboard-labyrinth",
+      "title": "Le Labyrinthe de la Navigation Clavier",
+      "description": "Les utilisateurs sans souris sont perdus. Les pièges sont nombreux. Comment guides-tu leur route ?",
+      "image": "keyboard-lab.jpg",
+      "choices": [
+        {
+          "text": "Implémenter un focus clair et une navigation séquentielle.",
+          "image": "keyboard-focus.jpg",
+          "consequences": {
+            "accessibilityScore": 3,
+            "gold": -2,
+            "narrationByOrigin": {
+              "intro-forgeron": "Tu traces le chemin comme on forge une lame : méthodiquement, chaque tabulation est un coup de marteau, chaque focus une étincelle guidant les pas perdus à travers le labyrinthe d'ombres.",
+              "intro-alchimiste": "Tu ajustes les éléments invisibles de la page comme une potion délicate. Le focus circule désormais avec fluidité, révélant l'ordre caché dans le chaos et révélant la trame secrète du monde aux voyageurs privés de vue.",
+              "intro-stratege": "Tu conçois une route sans impasse vers la sortie de ce dédale maudit, un itinéraire précis où chaque touche mène à la victoire. Aucun détour inutile : l'efficacité d'un général, au service de tous.",
+              "intro-mage": "Par un sort de lucidité, tu rends visible ce qui ne l'était pas et chaque élément reçoit la bénédiction du focus. Le chemin se dessine, mystique et limpide, guidé par les runes de ton savoir ancien."
+            }
+          },
+          "nextScene": "victory-hall"
+        },
+        {
+          "text": "Laisser la navigation au bon vouloir du framework.",
+          "image": "keyboard-chaos.jpg",
+          "consequences": {
+            "accessibilityScore": -2,
+            "gold": 0,
+            "narration": "Les utilisateurs tournent en rond, piégés dans l'obscurité."
+          },
+          "nextScene": "victory-hall"
+        }
+      ]
+    },
+    {
+      "id": "victory-hall",
+      "title": "La Salle de l'Équilibre Rétabli",
+      "description": "Tu arrives au cœur du royaume. Le Conseil d'Accessibilia t'évalue.",
+      "image": "victory-hall.jpg",
+      "choices": []
     }
   ]
 }
