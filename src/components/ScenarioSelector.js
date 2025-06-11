@@ -26,12 +26,10 @@ function ScenarioSelector() {
       <h1>Entrez dans l'univers de l'accessibilité</h1>
       <h2>Choisissez votre scénario</h2>
       <p>
-        <p>
-          Plongez dans des aventures interactives où chaque choix vous confronte
-          à des situations d'accessibilité web concrètes. Apprenez en jouant,
-          explorez les bonnes pratiques, et devenez un héros du numérique
-          inclusif !
-        </p>
+        Plongez dans des aventures interactives où chaque choix vous confronte à
+        des situations d'accessibilité web concrètes. Apprenez en jouant,
+        explorez les bonnes pratiques, et devenez un héros du numérique inclusif
+        !
       </p>
       <ul className={styles.scenarioList}>
         {SCENARIOS.map((scenario) => (
