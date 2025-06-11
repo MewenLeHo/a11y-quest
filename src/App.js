@@ -22,6 +22,11 @@ function App() {
     return (
       <div className="App">
         <h1>A11y Quest : l'audit dont vous êtes le héros</h1>
+        <img
+          src={`${process.env.PUBLIC_URL}/images/intro/dark-castle.png`}
+          alt=""
+          className="intro-img"
+        />
         <div className="player-name-input">
           <label htmlFor="playerName">Entrez votre nom de personnage :</label>
           <input
